@@ -1,33 +1,36 @@
-# Homebrew Tap for Agent-Mesh
+# Homebrew Tap for StayPoint
 
-Official Homebrew tap for [Agent-Mesh (`mesh`)](https://github.com/VinnyVanGogh/agent-mesh) — Autonomous AI Agent Ops, Quota Pacing & Cross-AI Context Platform for Claude Code and Google Antigravity.
+Official Homebrew tap for [StayPoint (`staypoint`)](https://github.com/VinnyVanGogh/agent-mesh) — Autonomous AI Agent Ops, Quota Pacing & Cross-AI Context Platform for Claude Code and Google Antigravity (formerly Agent-Mesh).
 
 ## Installation
 
 ```bash
 brew tap VinnyVanGogh/tap
-brew install mesh
+brew install staypoint
 ```
+
+*(Note: `brew install mesh` remains supported as a backwards-compatible alias.)*
 
 ## Available Formulae
 
 | Formula | Description |
 |---|---|
-| `mesh` | Agent-Mesh CLI (`mesh`) and background telemetry daemon (`meshd`) |
+| `staypoint` | StayPoint CLI (`staypoint`) and background telemetry daemon (`staypointd`) |
+| `mesh` | Compatibility formula providing `mesh` and `meshd` aliases to StayPoint |
 
 ## Quick Start
 
 ```bash
 # Verify installation
-mesh version
+staypoint version
 
 # Initialize directories and start background watcher
-mesh init
+staypoint init
 
 # Add shell integration to ~/.zshrc
-eval "$(mesh init --shell)"
+eval "$(staypoint init --shell)"
 ```
 
 ## Documentation
 
-For full architecture documentation, command guides, and executive reporting instructions, see the main [Agent-Mesh repository](https://github.com/VinnyVanGogh/agent-mesh).
+For full architecture documentation, command guides, and executive reporting instructions, see the main [StayPoint repository](https://github.com/VinnyVanGogh/agent-mesh).

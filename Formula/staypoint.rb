@@ -1,5 +1,5 @@
-class Mesh < Formula
-  desc "Autonomous AI Agent Ops, Quota Pacing & Cross-AI Context Platform (now StayPoint)"
+class Staypoint < Formula
+  desc "Autonomous AI Agent Ops, Quota Pacing & Cross-AI Context Platform"
   homepage "https://github.com/VinnyVanGogh/agent-mesh"
   version "0.1.0"
   license "Apache-2.0"
@@ -46,19 +46,17 @@ class Mesh < Formula
 
   def caveats
     <<~EOS
-      Note: Agent-Mesh has been rebranded to StayPoint!
-      The 'staypoint' binary and shell commands are now primary.
-      'mesh' remains available as a symlink alias.
+      StayPoint (formerly Agent-Mesh) installed successfully!
 
-      To update shell integration:
+      To enable shell aliases and automatic model routing, add this to your ~/.zshrc:
         eval "$(staypoint init --shell)"
 
-      To start the background watcher:
+      To start the background telemetry and rate-limit watcher daemon:
         staypoint init
     EOS
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/mesh version 2>&1 || #{bin}/staypoint version 2>&1")
+    assert_match "0.1.0", shell_output("#{bin}/staypoint version 2>&1 || #{bin}/mesh version 2>&1")
   end
 end
