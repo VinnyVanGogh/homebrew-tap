@@ -56,12 +56,6 @@ class Staypoint < Formula
     end
   end
 
-  bottle do
-    root_url "https://github.com/VinnyVanGogh/staypoint/releases/download/PLACEHOLDER_VERSION"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "BOTTLE_ARM64_SHA256"
-    sha256 cellar: :any_skip_relocation, ventura: "BOTTLE_AMD64_SHA256"
-  end
-
   def caveats
     <<~EOS
       StayPoint installed! Add shell integration to ~/.zshrc:
