@@ -5,13 +5,13 @@
 class Staypoint < Formula
   desc "Autonomous AI Agent Ops, Quota Pacing & Cross-AI Context Platform"
   homepage "https://github.com/VinnyVanGogh/staypoint"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.2.0/staypoint_0.2.0_darwin_amd64.tar.gz"
-      sha256 "8a4bfbe6f163dcb42d1bc58a0a39b4d4f8d8e5fb47395886d2a60e10b7757cc6"
+      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.3.0/staypoint_0.3.0_darwin_amd64.tar.gz"
+      sha256 "fb6095d53e94275440e70b4733a38f6eea9a86c4518bc8a9f205808654836646"
 
       define_method(:install) do
         bin.install "staypoint"
@@ -21,8 +21,8 @@ class Staypoint < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.2.0/staypoint_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c468c7c5c4c25ae05309834b54bdeb8cef4fc70627ede904d37b6c63f45844a8"
+      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.3.0/staypoint_0.3.0_darwin_arm64.tar.gz"
+      sha256 "f8c1e20be4ed5738b3c6d8cf2745a3203824c7db1e8f5cd26fd63c860ae0fce5"
 
       define_method(:install) do
         bin.install "staypoint"
@@ -35,8 +35,8 @@ class Staypoint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.2.0/staypoint_0.2.0_linux_amd64.tar.gz"
-      sha256 "b7c28306c105c9d78320fed3b737969e2c2968d1ae23cf258c638090171d42ed"
+      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.3.0/staypoint_0.3.0_linux_amd64.tar.gz"
+      sha256 "ab5539fff33debb6e173bf22961958207772942c1b3e143eb6f23be93bb8f0ec"
       define_method(:install) do
         bin.install "staypoint"
         bin.install "staypointd" if File.exist?("staypointd")
@@ -45,8 +45,8 @@ class Staypoint < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.2.0/staypoint_0.2.0_linux_arm64.tar.gz"
-      sha256 "413815e646571115fcc5fb06943e28de6e0e43fdc125d1e289f172db81004591"
+      url "https://github.com/VinnyVanGogh/staypoint/releases/download/v0.3.0/staypoint_0.3.0_linux_arm64.tar.gz"
+      sha256 "397077a5d90ecec0e51308863cd2b9b010eab0573b1c8094396b5c4dae6b546f"
       define_method(:install) do
         bin.install "staypoint"
         bin.install "staypointd" if File.exist?("staypointd")
